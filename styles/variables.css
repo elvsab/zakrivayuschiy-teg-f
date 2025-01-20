@@ -1,1 +1,24 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --Inter: 'Inter-Variable';
+    --PressStart2P: 'PressStart2P-Regular';
+    --cards-font-weight: 400;
+    --titles-font-weight: 700;
+    --header-inline-padding: clamp(0.875rem, -1.03rem + 0.5943vw, 7.53125rem);
+    --footer-inline-padding: clamp(0.4375rem,(100vw - 19.125rem) / 2, 12.15625rem);
+    --header-title-fs: clamp(3.0625rem, 1.9051rem + 4.9383vw, 4.0625rem);
+    --header-subtitle-fs: clamp(0.875rem, 0.224rem + 2.7778vw, 1.4375rem);
+    --desktop-width: clamp(23.4375rem, 30.5vw + 23.4375rem, 43.75rem);
+    --standard-border: 2px solid #000;
+    --bg-color: #fff;
+    --text-color: #000;
+    --contour-color: #000;
+    --core-color: #ff0000;
+    --text-size: 18px;
+    --button-text-size: 14px;
+    --users-text-shadow: 1px 0 0.5px #800080, 0 -1px 1px #8A2BE2, 1px -1px 1.5px #EE82EE;
+    --watermarks-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff; 
+    --background-gradient: repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+}
