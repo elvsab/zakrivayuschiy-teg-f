@@ -23,7 +23,7 @@
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
-
+  font-variation-settings: 'wght' var(--cards-font-weight);
 }
 
 @supports (font-variation-settings: normal) {
@@ -70,7 +70,7 @@
 }
 
 .content__section-title {
-  font-weight: var(--titles-font-weight);
+  font-variation-settings: 'wght' var(--titles-font-weight);
   font-size: var(--text-size);
   padding-inline: 10px;
   padding-block: 4px;
@@ -88,7 +88,7 @@
 }
 
 .content__section-paragraph {
-  font-weight: var(--cards-font-weight);
+  font-variation-settings: var(--cards-font-weight);
   font-size: var(--text-size);
   line-height: 21px;
 }
@@ -153,7 +153,7 @@
   top: 23px;
   right: 13px;
   font-family: var(--PressStart2P), sans-serif;
-  font-weight: inherit;
+  font-variation-settings: inherit;
   color: var(--text-color);
   font-size: var(--button-text-size);
   text-transform: uppercase;
@@ -182,7 +182,6 @@
 }
 
 .card__icon-button {
-  border: none;
   padding-inline-end: 12px;
   padding-block-start: 7px;
   border: 2px solid transparent;
@@ -265,7 +264,7 @@
   }
 }
 
-.like-icon.is-liked .heart{
+.like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s backwards;
 }
 
@@ -332,7 +331,7 @@
   position: relative;
   font-family: var(--PressStart2P), sans-serif;
   font-size: var(--button-text-size);
-  font-weight: var(--cards-font-weight);
+  font-variation-settings: var(--cards-font-weight);
   line-height: 0.9em;
   padding-inline: 29px;
 }
