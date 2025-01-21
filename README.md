@@ -1,1 +1,1 @@
-https://elvsab.github.io/zakrivayuschiy-teg-f/
+https://github.com/elvsab/zakrivayuschiy-teg-f/
