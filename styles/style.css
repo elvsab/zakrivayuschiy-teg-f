@@ -1,14 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
 
 .page {
   min-inline-size: 320px;
@@ -175,6 +164,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--text-color);
 }
 
 .content__section__menu {
@@ -222,7 +215,6 @@
 
 .like-icon:hover .core {
   fill: var(--contour-color);
-  transition-delay: 0.05s;
 }
 
 .like-icon .main-body {
@@ -271,8 +263,7 @@
   height: 38px;
   padding: 9px 17px;
   gap: 10px;
-  border-color: #fff;
-  transition: color 0.5s ease-in-out;
+  border-color: #000;
 }
 
 .btn-focus {
@@ -280,18 +271,9 @@
   transition: box-shadow 0.3s ease;
 }
 
-.btn-focus:focus {
+.btn-focus:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 var(--text-color);
-}
-
-.card__like-button , .footer__button-save {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  mix-blend-mode: difference;
-  color: var(--text-color);
-  z-index: 1;
 }
 
 .btn-hover-effect::before {
@@ -301,7 +283,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
@@ -315,11 +297,6 @@
 .footer__button-save::before {
   background-color: var(--text-color);
 }
-
-/*.card__like-button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--text-color);
-}*/
 
 .button__text {
   position: relative;
@@ -368,7 +345,7 @@
   padding-block-end: 30px;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 20px;
 }
 
 .footer__button[open] .button__text {
@@ -377,19 +354,24 @@
   line-height: 21px;
   background-color: transparent;
   cursor: pointer;
-  max-width: 234px;
+  max-width: 198px;
+  flex-shrink: 0;
 }
 
 .footer__button[open] .ok {
   border: 2px solid #fff;
-  max-width: 274px;
+  max-width: 293px;
+  padding-block: 6px;
 }
 
 .footer__button[open] {
   display: flex;
   flex-direction: column;
-  padding-inline: 42px;
+  padding-inline: 40px;
   padding-block: 30px;
+  border: var(--standard-border);
+  width: 100%;
+  max-width: 341px;
 }
 
 .icon-large {
@@ -460,10 +442,8 @@
   .footer__button[open] {
     padding-inline: 0px;
     padding: 30px;
-  }
-
-  .footer__button[open] .button__text {
-    padding-inline: 20px 35px;
+    max-width: 353px;
+    width: 100%;
   }
 
   .footer__button[open] .ok {
